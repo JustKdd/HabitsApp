@@ -5,10 +5,7 @@ import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "@/types";
 
 const WelcomeScreen: React.FC = () => {
-  type WelcomeScreenNavigationProp = StackNavigationProp<
-    RootStackParamList,
-    "welcome"
-  >;
+  type WelcomeScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 
   const navigation = useNavigation<WelcomeScreenNavigationProp>();
 

@@ -2,7 +2,6 @@ import { collection, addDoc, doc, getDoc, updateDoc } from "firebase/firestore";
 import { User } from "../model/user";
 import { db } from "../firebase";
 
-// Save user profile with an auto-generated ID
 export const saveUserProfile = async (
   user: Omit<User, "id">
 ): Promise<string | null> => {
@@ -16,7 +15,6 @@ export const saveUserProfile = async (
   }
 };
 
-// Get user profile
 export const getUserProfile = async (userId: string): Promise<User | null> => {
   try {
     const docRef = doc(db, "users", userId);
@@ -33,7 +31,6 @@ export const getUserProfile = async (userId: string): Promise<User | null> => {
   }
 };
 
-// Update specific fields of a user profile
 export const updateUserProfile = async (
   userId: string,
   data: Partial<User>
